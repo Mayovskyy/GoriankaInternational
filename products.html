@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="products.page.title">Наша Продукція — Горянка Торговий Дім</title>
+    <meta name="description"
+        content="Широкий асортимент м'ясної, молочної, рибної та іншої продукції від Торгового Дому Горянка. Перевірені виробники, найвища якість." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        'gorianka-red': '#D84315',
+                        'gorianka-green': '#2E5A27',
+                        charcoal: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        '4xl': '2rem',
+                        '5xl': '2.5rem',
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-cream font-sans text-charcoal overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header id="header" class="scrolled fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="images/logo_gorianka.png" alt="Горянка"
+                        class="h-12 w-auto group-hover:scale-105 transition-transform drop-shadow-md" />
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link" data-i18n="nav.home">Головна</a>
+                    <a href="products.html" class="nav-link active" data-i18n="nav.products">Наша Продукція</a>
+                    <a href="brands.html" class="nav-link" data-i18n="nav.brands">Бренди-Партнери</a>
+                    <a href="about.html" class="nav-link" data-i18n="nav.about">Про Нас</a>
+                    <a href="contacts.html" class="nav-link" data-i18n="nav.contacts">Контакти</a>
+                </nav>
+                <div class="flex items-center gap-3">
+                    <a href="tel:+380677771493" class="hidden sm:flex btn-primary">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <span data-i18n="nav.cta">Зв'язатись</span>
+                    </a>
+                    <button id="langToggleBtn" onclick="toggleLanguage()"
+                        class="hidden sm:flex items-center justify-center w-10 h-10 rounded-xl bg-gorianka-red/10 hover:bg-gorianka-red/20 border border-gorianka-red/30 text-gorianka-red transition-all duration-200"
+                        title="Switch to English">
+                        <span class="text-sm font-semibold tracking-wide">EN</span>
+                    </button>
+                    <button id="menuBtn" class="lg:hidden p-2 rounded-xl bg-white/80 backdrop-blur shadow-sm">
+                        <div class="hamburger-icon"><span></span><span></span><span></span></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu lg:hidden">
+            <div class="px-4 pb-6 pt-2 space-y-1">
+                <a href="index.html" class="mobile-nav-link" data-i18n="nav.home">Головна</a>
+                <a href="products.html" class="mobile-nav-link" data-i18n="nav.products">Наша Продукція</a>
+                <a href="brands.html" class="mobile-nav-link" data-i18n="nav.brands">Бренди-Партнери</a>
+                <a href="about.html" class="mobile-nav-link" data-i18n="nav.about">Про Нас</a>
+                <a href="contacts.html" class="mobile-nav-link" data-i18n="nav.contacts">Контакти</a>
+                <button onclick="toggleLanguage()"
+                    class="w-full text-center mt-2 py-2 rounded-xl bg-gray-100 text-charcoal font-semibold text-sm">EN /
+                    UA</button>
+                <a href="tel:+380677771493" class="btn-primary w-full text-center mt-2">+38 067 777 14 93</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="inline-flex items-center gap-2 bg-white/10 text-white/70 rounded-full px-4 py-2 text-sm mb-5"
+                    data-i18n="products.hero.badge">
+                    Каталог продукції
+                </div>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"
+                    data-i18n="products.hero.h1.1">Наша <span class="text-gorianka-red"
+                        data-i18n="products.hero.h1.2">Продукція</span></h1>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto" data-i18n="products.hero.sub">Широкий асортимент
+                    якісних продуктів від перевірених
+                    українських та європейських виробників</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- M'yasna -->
+            <div class="product-cat-card mb-8 overflow-hidden">
+                <div class="grid lg:grid-cols-2">
+                    <div class="relative overflow-hidden min-h-[320px]">
+                        <img src="images/category_kovbasy.png" alt="М'ясна продукція"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/20"></div>
+                    </div>
+                    <div class="p-8 sm:p-12 flex flex-col justify-center bg-white">
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-2 h-8 bg-gorianka-red rounded-full"></div>
+                            <div class="text-gorianka-red font-semibold text-sm tracking-wide uppercase"
+                                data-i18n="products.cat01.label">Категорія 01
+                            </div>
+                        </div>
+                        <h2 class="font-serif text-3xl font-bold mb-4" data-i18n="products.cat01.h2">М'ясна Продукція
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-6" data-i18n="products.cat01.p">
+                            Смачна і якісна м'ясна продукція від відомих виробників. Ковбаси, сосиски, сардельки, шинки
+                            та інші делікатеси за традиційними та сучасними рецептурами.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat01.li1">Ковбаса варена, копчена, напівкопчена</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat01.li2">Сосиски та сардельки різних видів</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat01.li3">Шинки, балики, м'ясні делікатеси</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat01.li4">Паштети та м'ясні консерви</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span
+                                class="bg-gorianka-red/10 text-gorianka-red text-xs font-semibold px-3 py-1 rounded-full">Забіяка</span>
+                            <span
+                                class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Дергачівський
+                                м'ясокомбінат</span>
+                        </div>
+                        <a href="tel:+380677771493" class="btn-primary self-start">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span data-i18n="products.cta.btn">Замовити по телефону</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Syry -->
+            <div class="product-cat-card mb-8 overflow-hidden">
+                <div class="grid lg:grid-cols-2">
+                    <div class="p-8 sm:p-12 flex flex-col justify-center bg-white order-2 lg:order-1">
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-2 h-8 bg-amber-500 rounded-full"></div>
+                            <div class="text-amber-600 font-semibold text-sm tracking-wide uppercase"
+                                data-i18n="products.cat02.label">Категорія 02</div>
+                        </div>
+                        <h2 class="font-serif text-3xl font-bold mb-4" data-i18n="products.cat02.h2">Сири</h2>
+                        <p class="text-gray-600 leading-relaxed mb-6" data-i18n="products.cat02.p">
+                            Великий вибір сирів — від традиційних українських до вишуканих європейських. Тверді,
+                            напівтверді, м'які та плавлені сири від провідних виробників.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat02.li1">Тверді і напівтверді сири</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat02.li2">М'які та розсільні сири</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat02.li3">Імпортні та артизанські сири</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat02.li4">Плавлені та копчені сири</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="bg-amber-50 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">Звени
+                                Гора</span>
+                            <span
+                                class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Milker</span>
+                            <span
+                                class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Molendam</span>
+                            <span
+                                class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Dziugas</span>
+                        </div>
+                        <a href="tel:+380677771493" class="btn-primary self-start">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            Замовити по телефону
+                        </a>
+                    </div>
+                    <div class="relative overflow-hidden min-h-[320px] order-1 lg:order-2">
+                        <img src="images/category_syry.png" alt="Сири"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Molochna -->
+            <div class="product-cat-card mb-8 overflow-hidden">
+                <div class="grid lg:grid-cols-2">
+                    <div class="relative overflow-hidden min-h-[320px]">
+                        <img src="images/category_molochna.png" alt="Молочна продукція"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    </div>
+                    <div class="p-8 sm:p-12 flex flex-col justify-center bg-white">
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-2 h-8 bg-sky-400 rounded-full"></div>
+                            <div class="text-sky-600 font-semibold text-sm tracking-wide uppercase"
+                                data-i18n="products.cat03.label">Категорія 03</div>
+                        </div>
+                        <h2 class="font-serif text-3xl font-bold mb-4" data-i18n="products.cat03.h2">Молочна Продукція
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-6" data-i18n="products.cat03.p">
+                            Свіжа та якісна молочна продукція. Молоко, кефір, ряжанка, сметана, йогурти, масло, сир
+                            кисломолочний від провідних українських виробників.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat03.li1">Молоко, кефір, ряжанка, йогурти</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat03.li2">Вершкове масло та маргарин</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat03.li3">Сметана, вершки</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat03.li4">Сир кисломолочний, сирні вироби</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span
+                                class="bg-sky-50 text-sky-700 text-xs font-semibold px-3 py-1 rounded-full">Горянка</span>
+                            <span class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Дари
+                                Карпат</span>
+                            <span
+                                class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Українське</span>
+                            <span
+                                class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Гощаночка</span>
+                        </div>
+                        <a href="tel:+380677771493" class="btn-primary self-start">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            Замовити по телефону
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ryba -->
+            <div class="product-cat-card mb-8 overflow-hidden">
+                <div class="grid lg:grid-cols-2">
+                    <div class="p-8 sm:p-12 flex flex-col justify-center bg-white order-2 lg:order-1">
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-2 h-8 bg-teal-500 rounded-full"></div>
+                            <div class="text-teal-600 font-semibold text-sm tracking-wide uppercase"
+                                data-i18n="products.cat04.label">Категорія 04</div>
+                        </div>
+                        <h2 class="font-serif text-3xl font-bold mb-4" data-i18n="products.cat04.h2">Рибна Продукція
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-6" data-i18n="products.cat04.p">
+                            Широкий асортимент рибної продукції — свіжозморожена, копчена, солена та маринована риба від
+                            надійних виробників.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat04.li1">Свіжозаморожена риба та морепродукти</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat04.li2">Копчена риба (гарячого і холодного копчення)</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat04.li3">Солена та маринована риба</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-gray-700">
+                                <svg class="w-5 h-5 text-gorianka-green shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span data-i18n="products.cat04.li4">Рибні консерви та пресерви</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="bg-teal-50 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full">Рибна
+                                Фішка</span>
+                            <span
+                                class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">Русалоча</span>
+                            <span class="bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full">ROYAL
+                                TIGER</span>
+                        </div>
+                        <a href="tel:+380677771493" class="btn-primary self-start">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            Замовити по телефону
+                        </a>
+                    </div>
+                    <div class="relative overflow-hidden min-h-[320px] order-1 lg:order-2">
+                        <img src="images/category_ryba.png" alt="Рибна продукція"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Insha Produktsiya island -->
+            <div class="island p-10 sm:p-14 text-white mt-8"
+                style="background: linear-gradient(135deg, #D84315 0%, #BF360C 100%);">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 bg-white/15 rounded-full px-4 py-2 text-sm mb-6"
+                        data-i18n="products.cat05.label">Категорія 05</div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-4" data-i18n="products.cat05.h2">Інша
+                        Продукція</h2>
+                    <p class="text-white/80 text-lg leading-relaxed mb-8" data-i18n="products.cat05.p">
+                        Широкий асортимент додаткових харчових продуктів: дріжджі, соуси, снеки та інші товари від
+                        перевірених виробників.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full">Fishki
+                            Food</span>
+                        <span class="bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full">Харківські
+                            Дріжджі</span>
+                        <span class="bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full">Золота
+                            Миля</span>
+                        <span class="bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full">Vit-Fit</span>
+                    </div>
+                    <a href="tel:+380677771493"
+                        class="inline-flex items-center gap-3 bg-white font-bold rounded-2xl px-8 py-4 text-lg hover:bg-cream transition-colors shadow-lg"
+                        style="color:#D84315;">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        +38 067 777 14 93
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+        <!-- FOOTER -->
+    <footer class="bg-charcoal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="images/logo_gorianka.png" alt="Горянка" class="h-12 w-auto drop-shadow-md" />
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="footer.partner">
+                        Надійний партнер, який дбає про якість та задоволення ваших потреб у харчових продуктах.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 bg-white/10 hover:bg-gorianka-red rounded-xl flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 hover:bg-gorianka-red rounded-xl flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round" /></svg>
+                        </a>
+                        <a href="https://t.me/goriankalviv" class="w-9 h-9 bg-white/10 hover:bg-gorianka-red rounded-xl flex items-center justify-center transition-colors" aria-label="Telegram">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21.78 3.28a1.5 1.5 0 00-1.54-.22L2.89 10.56a1.5 1.5 0 00.07 2.79l4.04 1.35 1.53 4.8a.75.75 0 001.3.22l2.47-2.89 4.42 3.26a1.5 1.5 0 002.3-.97l2.25-14.25a1.5 1.5 0 00-.49-1.59z" /></svg>
+                        </a>
+                        <a href="viber://chat?number=+380677771493" class="w-9 h-9 bg-white/10 hover:bg-gorianka-red rounded-xl flex items-center justify-center transition-colors" aria-label="Viber">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.8 3.2C18.5 1 15.4 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.4-1-6.5-3.2-8.8zm-8.8 18c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7.9.9-3.6-.2-.4C2.5 15.1 2 13.1 2 12 2 6.5 6.5 2 12 2c2.6 0 5.1 1 7 2.8 1.9 1.8 3 4.3 3 6.9-.1 5.5-4.6 10-10 10.3zm5.8-7.7l-2-1c-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.1.1-.3.2-.5.1-1.5-.7-2.5-1.7-3.2-3.2-.1-.3 0-.4.1-.5l.5-.6c.1-.2.2-.4.3-.6 0-.2 0-.4-.1-.6l-1-2.3c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.8.9-1.1 1.9-.9 3.1.4 1.8 1.5 3.4 3.1 4.7 1.4 1.1 3.2 1.8 5.1 1.8h.4c1.1-.2 2-.8 2.4-1.7.2-.5.1-.9-.5-1.2z" /></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div>
+                    <h4 class="font-semibold text-white mb-5 text-sm tracking-wider uppercase" data-i18n="footer.nav.title">Навігація</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="footer-link" data-i18n="nav.home">Головна</a></li>
+                        <li><a href="products.html" class="footer-link" data-i18n="nav.products">Наша Продукція</a></li>
+                        <li><a href="brands.html" class="footer-link" data-i18n="nav.brands">Бренди-Партнери</a></li>
+                        <li><a href="about.html" class="footer-link" data-i18n="nav.about">Про Нас</a></li>
+                        <li><a href="contacts.html" class="footer-link" data-i18n="nav.contacts">Контакти</a></li>
+                    </ul>
+                </div>
+                <!-- Contacts -->
+                <div>
+                    <h4 class="font-semibold text-white mb-5 text-sm tracking-wider uppercase" data-i18n="footer.contacts.title">Контакти</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-gray-500 text-xs mb-1" data-i18n="footer.phone.label">Телефон</div>
+                            <a href="tel:+380677771493" class="text-white font-semibold text-lg hover:text-gorianka-red transition-colors">+38 067 777 14 93</a>
+                        </div>
+                        <div>
+                            <div class="text-gray-500 text-xs mb-1" data-i18n="footer.email.label">Email</div>
+                            <a href="mailto:td.horyanka@gmail.com" class="text-gray-300 hover:text-white transition-colors text-sm">td.horyanka@gmail.com</a>
+                        </div>
+                        <div>
+                            <div class="text-gray-500 text-xs mb-1" data-i18n="footer.hours.label">Години роботи</div>
+                            <div class="text-gray-300 text-sm" data-i18n="footer.hours.weekdays">Пн–Пт: 08:00 – 18:00</div>
+                            <div class="text-gray-300 text-sm" data-i18n="footer.hours.saturday">Сб: 09:00 – 14:00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Addresses -->
+                <div>
+                    <h4 class="font-semibold text-white mb-5 text-sm tracking-wider uppercase">Наші Адреси</h4>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <div class="w-7 h-7 bg-gorianka-red/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-3.5 h-3.5 text-gorianka-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div><div class="text-white font-medium text-sm">Львів</div><div class="text-gray-400 text-xs">вул. Промислова 50/52</div></div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="w-7 h-7 bg-gorianka-green/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-3.5 h-3.5 text-gorianka-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                            </div>
+                            <div><div class="text-white font-medium text-sm">Тернопіль</div><div class="text-gray-400 text-xs">вул. Поліська 14</div></div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="w-7 h-7 bg-gorianka-green/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-3.5 h-3.5 text-gorianka-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                            </div>
+                            <div><div class="text-white font-medium text-sm">Стрий</div><div class="text-gray-400 text-xs">вул. Крива 4</div></div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="w-7 h-7 bg-gorianka-green/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-3.5 h-3.5 text-gorianka-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                            </div>
+                            <div><div class="text-white font-medium text-sm">Луцьк</div><div class="text-gray-400 text-xs">вул. І. Франка 44</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm" data-i18n="footer.copyright">© 2024 Торговий Дім «Горянка». Всі права захищено.</p>
+                <p class="text-gray-600 text-xs" data-i18n="footer.address.bottom">м. Львів, вул. Промислова 50/52</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

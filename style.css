@@ -1,0 +1,330 @@
+/* ==============================
+   GORIANKA — Global Styles
+   Premium Rustic Food Brand
+   ============================== */
+
+/* --- HEADER SCROLL EFFECT --- */
+#header {
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+#header.scrolled {
+  background: rgba(253, 251, 247, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 24px rgba(0,0,0,0.07);
+}
+#header.scrolled .nav-link {
+  color: #1A1A1A;
+}
+#header.scrolled .nav-link:hover {
+  color: #D84315;
+}
+#header:not(.scrolled) .nav-link {
+  color: rgba(255,255,255,0.85);
+}
+#header:not(.scrolled) .nav-link:hover {
+  color: #fff;
+}
+#header:not(.scrolled) .nav-link.active {
+  color: #fff;
+}
+#header:not(.scrolled) .logo-text {
+  color: #fff;
+}
+
+/* --- NAV LINKS --- */
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #D84315;
+  transition: width 0.3s ease;
+  border-radius: 99px;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link.active { color: #D84315 !important; }
+
+/* --- MOBILE MENU --- */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: rgba(253,251,247,0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.mobile-menu.open {
+  max-height: 480px;
+}
+.mobile-nav-link {
+  display: block;
+  padding: 0.85rem 1rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  border-radius: 0.75rem;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1rem;
+}
+.mobile-nav-link:hover {
+  background: rgba(216, 67, 21, 0.08);
+  color: #D84315;
+}
+
+/* --- HAMBURGER --- */
+.hamburger-icon { width: 22px; display: flex; flex-direction: column; gap: 5px; }
+.hamburger-icon span { display: block; height: 2px; background: #1A1A1A; border-radius: 99px; transition: all 0.3s ease; transform-origin: center; }
+.hamburger-icon.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger-icon.open span:nth-child(2) { opacity: 0; }
+.hamburger-icon.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* --- BUTTONS --- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #D84315;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.875rem;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(216,67,21,0.25);
+}
+.btn-primary:hover {
+  background: #BF360C;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(216,67,21,0.35);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #D84315;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.875rem;
+  border: 2px solid #D84315;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  background: #D84315;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.btn-ghost-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.2s ease;
+}
+.btn-ghost-white:hover {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* --- ISLAND / BENTO CARDS --- */
+.island {
+  border-radius: 2rem;
+  box-shadow: 0 2px 40px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* --- PRODUCT ISLANDS --- */
+.product-island {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.product-island:hover {
+  transform: translateY(-4px);
+}
+
+/* --- FEATURE CARDS --- */
+.feature-card {
+  background: #F8F5F0;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+.feature-card:hover {
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+}
+.feature-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- CATEGORY BADGE --- */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+}
+
+/* --- SCROLL CAROUSEL --- */
+.scroll-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 0.5rem;
+}
+.scroll-carousel::-webkit-scrollbar { display: none; }
+.carousel-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+.floating-img {
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.4));
+  transition: transform 0.4s ease;
+}
+.carousel-card:hover .floating-img {
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* --- FOOTER LINKS --- */
+.footer-link {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+  display: block;
+}
+.footer-link:hover { color: #fff; }
+
+/* --- ANIMATIONS --- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.65s ease forwards;
+  opacity: 0;
+}
+
+/* --- PAGE HERO (inner pages) --- */
+.page-hero {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(216,67,21,0.15) 0%, transparent 70%);
+}
+
+/* --- BRAND CARD --- */
+.brand-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.brand-card:hover {
+  box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  border-color: #D84315;
+}
+
+/* --- CONTACT CARD --- */
+.contact-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.25s ease;
+}
+.contact-card:hover {
+  box-shadow: 0 6px 28px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+/* --- PRODUCT CATEGORY CARD (products page) --- */
+.product-cat-card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+.product-cat-card:hover {
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+/* --- MAP PLACEHOLDER --- */
+.map-placeholder {
+  background: #E8E4DE;
+  border-radius: 1.5rem;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.map-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="%23E0DCD5" width="100" height="100"/><line x1="0" y1="25" x2="100" y2="25" stroke="%23D0CCC5" stroke-width="0.5"/><line x1="0" y1="50" x2="100" y2="50" stroke="%23D0CCC5" stroke-width="0.5"/><line x1="0" y1="75" x2="100" y2="75" stroke="%23D0CCC5" stroke-width="0.5"/><line x1="25" y1="0" x2="25" y2="100" stroke="%23D0CCC5" stroke-width="0.5"/><line x1="50" y1="0" x2="50" y2="100" stroke="%23D0CCC5" stroke-width="0.5"/><line x1="75" y1="0" x2="75" y2="100" stroke="%23D0CCC5" stroke-width="0.5"/></svg>') center/cover;
+}
+
+/* --- SCROLLBAR OVERRIDE --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #FDFBF7; }
+::-webkit-scrollbar-thumb { background: #D8D0C4; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #C4B8A8; }
+
+/* --- SMOOTH SCROLL --- */
+html { scroll-behavior: smooth; }

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+	<html lang="ru">
+<head>
+	<meta charset="windows-1251">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Индексирование -->
+	<meta name="robots" content="index, follow">
+    <!-- End Индексирование -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Preload для асинхронной загрузки файла CSS -->
+	<link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="css/reset.css" as="style" onload="this.rel='stylesheet'">
+	<!-- End Preload для асинхронной загрузки файла CSS -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="canonical" href="https://tm.ua/404.php">
+	<link rel="icon" href="/favicon.svg">
+    <title>Извините, но этой страницы или не было, или она перенесена</title>
+	<meta name="description" content="Помилка 404 - цієї сторінки або не було, або вона перенесена!"> 
+<meta name="keywords" content="замовити реєстрацію торгової марки, торгова марка, торгові марки, реєстрація торгової марки, реєстрація торгових марок, домен UA, реєстрація домену UA, міжнародна реєстрація торгової марки, міжнародна торгова марка, міжнародна реєстрація торгових марок, винахід, вказівку чи назву місця походження товару">
+	
+</head>
+<body>
+    <div class="wrapper oznalah__page">
+        <!-- header -->
+        <header class="header">
+			<!-- left menu -->
+			
+	<!-- Блок Контактов -->
+	<div class="header__contacts">
+		<div class="header__phones">
+			<span class="tell__phone">Тел.:</span>
+			<a href="tel:+380639425533">063 942 55 33,</a>
+			<a href="tel:+380987733353">098 773 33 53,</a>
+			<a href="tel:+380994330133">099 433 01 33</a>
+		</div>
+		<div class="header__social">
+			<a href="tg://resolve?domain=TorgoviMarky" title="Напишите tm.ua в Telegram">Telegram</a>
+			<a href="viber://chat?number=%2B380987733353" title="Напишите tm.ua в Viber">Viber</a> 
+			<a href="whatsapp://send?phone=+380987733353">WhatsApp</a>
+			<a class="header__location" href="https://maps.app.goo.gl/6ejBiQsFa8Zc2PTe7" target="_blank">
+				<img src="images/location2.svg" width="30" height="30" alt="адрес офиса tm.ua" title="Адрес офиса Украинские торговые марки"></a>
+		</div>
+	</div>
+	<!-- End Блок Контактов -->
+
+	<!-- Блоки НАЗВАНИЕ САЙТА, ЛОГО И ЯЗЫКА для моб и десктоп -->
+	<div class="container">
+		<div class="header__info">
+			<div class="close-menu-block"></div>
+			<div class="mobile__btn">
+				<span></span><span></span><span></span>
+			</div>
+			<a class="logo" href="https://tm.ua/">
+				<span>tm.ua</span>
+				<span class="blue"></span>
+				<span class="yellow"></span>
+			</a>
+			<div class="title">
+				<div class="title__name">Регистрация торговой марки <br> <span class="title__place">Украина, Евросоюз и все
+						страны мира</span></div>
+			</div>
+			<div class="header__lang">
+				<a id="langBtnInActive" class="lang-btn" rel="nofollow" href="https://tm.ua/ua/"><span class="lang-btn gray">UA</span></a><br>
+				<span class="lang-btn onlyred">RU</span>
+			</div>
+		</div>
+	</div>
+
+			<!-- \left menu --> 
+        </header>
+        <div class="container">
+            <div class="main__wrapper">
+                <nav class="menu">
+                    <div class="title__block ">
+                        <div class="menu__title">Зміст</div>
+                    </div>
+                    <div class="menu__inner">
+						<!-- left menu -->
+						<div class="nav-menu">
+	<!-- <div class="title__block ">
+		<div class="menu__title">Содержание</div>
+	</div> -->
+	<div class="close__btn">
+		<svg width="25" height="25" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M47.6875 47.6875L1.3125 1.3125M1.3125 47.6875L47.6875 1.3125L1.3125 47.6875Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		</svg>
+	</div>
+	<div class="menu__inner">
+		<ul class="menu__list">
+			<li class="menu__item active-page">
+				<a class="menu__link active-page" href="https://tm.ua/">Главная</a>
+			</li>
+			<li class="menu__item">
+				<span class="menu__link">Торговая марка</span>
+				<ul>
+					<li><a href="oznakah.html">Что такое торговая марка? Виды ТМ, требования к ним и
+							термины</a>
+					</li>
+					<li><a href="domain.html">Домен UA</a></li>
+					<li><a href="chtomojet.html">Что и как регистрируют? Порядок и сроки регистрации</a></li>
+					<li><a href="registr-ukr.html">Регистрация торговой марки: процедура и порядок работы по регистрации</a>
+					</li>
+					<li><a href="search.html">Проверка торговой марки</a></li>
+					<li><a href="s-kem-registrirovat-torgovuyu-marku.html">С кем регистрировать марку?</a></li>
+					<li><a href="registr-int.html">Международная регистрация торговых марок</a></li>
+					<li><a href="registr-eur.html">Торговая марка Европы</a></li>
+					<li><a href="torgovyye-marki-polshi.html">Торговые марки Польши</a></li>
+					<li><a href="licension.html">Передача прав на торговую марку</a></li>
+					<li><a href="sud-torgovaya-marka-avtorskoye-pravo-patent.html">Суд торговая марка и авторское право</a></li>
+					<li><a href="znaki-p.html">Примеры торговых марок, зарегистрированных нами</a></li>
+					<li><a href="znaki-i.html">Интересные торговые марки</a></li>
+					<li><a href="klas.html">Классификация товаров и услуг для регистрации знаков</a></li>
+					<li><a href="poisk-torgovoy-marki.html">Заказать проверку ТМ</a></li>
+				</ul>
+			</li>
+			<li class="menu__item">
+				<span class="menu__link">Штрих-код</span>
+				<ul>
+					<li><a href="barcode.html">Получение штрих-кода</a></li>
+					<li><a href="shtrih-kody.html">Штрих-коды стран</a></li>
+				</ul>
+			</li>
+			<li class="menu__item">
+				<span class="menu__link">Авторское право</span>
+				<ul>
+					<li><a href="avtorskoe-pravo-i-smezhnye-prava.html">Авторское право и смежные права</a></li>
+					<li><a href="registratsiya-avtorskikh-prav.html">Регистрация авторских прав</a></li>
+					<li><a href="registratsiya-avtorskikh-prav-USA.html">Регистрация авторских прав в США</a></li>
+				</ul>
+			</li>
+			<li class="menu__item">
+				<span class="menu__link">Патент</span>
+				<ul>
+					<li><a href="patent-na-izobretenie-s-tm-ua.html">Изобретение</a></li>
+					<li><a href="poleznaya-model-ukraina.html">Полезная модель</a></li>
+					<li><a href="patent-promyshlennyi-obrazets.html">Промышленный образец</a></li>
+					<li><a href="patentnyy-poisk.html">Патентный поиск</a></li>
+				</ul>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="https://tm.ua/forum/">Форум</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="arts.php">Статьи</a>
+				<ul>
+					<li><a href="arts.php#1">Торговая марка в Украине</a></li>
+					<li><a href="arts.php#11">Домен UA</a></li>
+					<li><a href="arts.php#4">Международная регистрация</a></li>
+					<li><a href="arts.php#7">Изобретение</a></li>
+					<li><a href="arts.php#6">Полезная модель</a></li>
+					<li><a href="arts.php#5">Промышленный образец</a></li>
+					<li><a href="arts.php#8">Авторское право</a></li>
+					<li><a href="arts.php#9">Лицензионный договор</a></li>
+					<li><a href="arts.php#11a">Судебная практика</a></li>				
+					<li><a href="arts.php#10">Ноу-хау</a></li>
+				</ul>
+			</li>
+			
+			<li class="menu__item">
+				<a class="menu__link" href="price.html">Прайс-лист</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="about.html">Об Агентстве</a>
+			</li>
+			<li class="menu__item">
+				<a class="menu__link" href="adres-ofisa-ukrainskie-torgovye-marki.html">Адрес офиса</a>
+			</li>
+		</ul>
+	</div>
+</div>
+						<!-- \left menu -->                        
+                    </div>
+                </nav>
+                <main class="main include__page">
+                    <section class="about">
+                        <div class="title__block main__block">
+                            <h1 class="about__title">Помилка 404 - нема цієї сторінки</h1>
+                        </div>
+                            <div class="about__infoblock">
+                                <div class="about__information">
+									<h2 class="about__text dice__text  oznakah-text">Такої сторінки немає</h2> <br>
+									<div class="about__infoblock">
+                                <div class="about__information">
+								<div class="about__photo">
+                                    <img class="about__photo-img" src="images/advokat-zakhyst-prav-na-tm-u-sudi.webp" width="200" height="224" alt="Яна Кондратюк адвокат торгова марка та авторське право" title="Адвокат Яна Кондратюк - торгів"
+                                    <div class="about__people">
+                                        <p class="about__name">Яна Кондратюк</p>
+                                        <p class="about__job">Директор Агенції</p>
+                                    </div>
+                                </div> 
+						<p style="text-align: justify">
+Ми перепрошуємо! Але Ви, на жаль, перейшли на сторінку, яка вже не існує на нашому сайті! <br>
+Так буває, якщо адреса сторінки <b>виявилася помилковою</b>.<br>
+Або з якихось причин ця сторінка вже <b>не існує</b>. <br>
+Або сторінку <b>перенесено на іншу адресу</b>.<br> Подивіться, будь ласка, на меню сайту! Можливо, що Ви знайдете там все, що шукаєте!
+Або:<br>
+• <b>Зателефонуйте</b>:<br>
+- Лайф <a href="tel:+380639425533">063-942-5533</a> <br>
+- Київстар <a href="tel:+380987733353">098-773-3353</a><br>
+- Vodafone / Vodafone <a href="tel: +380994330133">099-433-0133</a>. <br>
+• <b>Напишіть</b> нам у:<br>
+- <a title="Telegram" href="tg://resolve?domain=TorgoviMarky">Telegram</a><br>
+- <a title="Viber" href="viber://chat?number=%2B380987733353">Viber</a><br>
+- <a title="WhatsApp" href="whatsapp://send?phone=+380987733353">WhatsApp</a><br>
+<u>Примітка:</u> всі мессенджери на номері +380987733353<br>
+• <b>Надішліть</b> нам листа на <a href="mailto:info@tm.ua">електронну пошту</a><br>
+• <b>Приходьте до нас</b> в офіс за адресою:<br>
+м. Київ, пр-т Берестейський, 65-А, 3 Секція, оф. 256, Агентство УКРАЇНСЬКІ ТОРГОВЕЛЬНІ МАРКИ.<br>
+<b class="onlyred">Велике прохання:</b> у зв'язку з тимчасовими складнощами в ситуації з електрикою та інтернетом - заздалегідь перепрошуємо за можливі збої зі зв'язком. І ми будемо дуже вдячні, якщо Ви виявите наполегливість: немає телефонного зв'язку, але може працювати інтернет!
+<br><br>
+
+  <h3 class="domain__title onlyred dice__text">Наші основні послуги з ТМ, доменів UA, патентів, штрих-кодів та АП</h3><br>
+<br>
+<h4 class="registry__title onlyred">Торгова марка</h4><br>
+• Пошук та перевірка торгової марки в Україні та за кордоном;<br>
+• <a class="blue" href="/ua/">Реєстрація торгової марки</a>;<br>
+• Торгова марка Польщі;<br>
+• Реєстрація міжнародної торгової марки;<br>
+• Реєстрація торгової марки Євросоюзу;<br>
+• Внесення торгової марки до Митного реєстру;<br>
+• Продовження Свідоцтва на торговельну марку.<br>
+• Оскарження попередньої відмови за ТМ;<br>
+• Розміщення для продажу ТМ та доменів;<br>
+• Отримання документів (Виписок) щодо дії національних та міжнародних торгових марок в Україні;<br>
+• Отримання дубліката Свідоцтва на торговельну марку; <br><br>
+
+<h4 class="registry__title onlyred">Домен UA</h4><br>
+• Реєстрація домену UA;<br>
+• Продаж домену UA;<br>
+• Купівля домену UA;<br>
+• Оренда домену UA; <br><br>
+
+<h4 class="registry__title onlyred">Винахід та Корисна модель</h4><br>
+• Патентний пошук;<br>
+• Отримати <a class="blue" href="/ua/patent-na-vynakhid.html">патент на винахід</a>, корисну модель;<br>
+• Продовження патенту на винахід, корисну модель;<br>
+• Проходження Національної фази міжнародного патенту з PCT;<br>
+• Передача прав на патенти на винахід, корисну модель;<br>
+• Отримання дубліката патенту на винахід, корисну модель; <br><br>
+
+<h4 class="registry__title onlyred">Промисловий зразок</h4><br>
+• Реєстрація промзразка;<br>
+• Продовження Свідоцтва на промзразок;<br>
+• Міжнародна реєстрація промзразка;<br>
+• Отримання дублікату Свідоцтва на промисловий зразок; <br><br>
+
+<h4 class="registry__title onlyred">Авторські права</h4><br>
+• <a class="blue" href="/ua/reyestratsiya-avtorskoho-prava.html">Реєстрація авторського права</a> в Україні;<br>
+• Авторське право у США;<br>
+• Підготовка Авторських договорів та Договорів передачі авторських прав;<br><br>
+
+				<h4 class="registry__title onlyred">Географічні вказівки</h4><br>
+• Складання та подання документів для проведення експертизи Заявки на реєстрацію географічної вказівки чи назви місця походження товару;<br>
+• Участь у підготовці Заявником документів з викладенням основних положень специфікації товару та опис взаємозв'язку товару з географічним середовищем або географічним місцем походження товару;<br>
+• Відповіді на Запити та Повідомлення експертизи Заявки на реєстрацію географічної вказівки;<br><br>
+
+<h4 class="registry__title onlyred">Штрих-код</h4><br>
+• Отримання штрих-коду;<br>
+• Отримання додаткового штрих-коду;<br>
+• Додаткові послуги в Асоціації товарної нумерації (зниження вартості штрих-коду при замовлення понад 250 штрихових кодів на 1 рік);<br>
+• Відновлення членства в Асоціації товарної нумерації;<br>
+<br>
+
+<h4 class="registry__title onlyred">Розпорядження правами на об'єкти права інтелектуальної власності</h4><br>
+• Підготовка документів для повного або часткового передання прав на всі об'єкти права ІВ, вище зазначені на цій сторінці;<br>
+• Складання та реєстрація (за потребою) Ліцензійного договору або Ліцензії на всі об'єкти права інтелектуальної власності, вище зазначені на цій сторінці;<br><br>
+
+<h4 class="registry__title onlyred">Послуги Адвоката:</h4><br>
+• Усні та письмові консультації з питань захисту на всі об'єкти права ІВ, зазначені вище на цій сторінці;<br>
+• Написання досудових Попереджень та/або Претензій щодо порушення прав з вимогами припинити ці порушення;<br>
+• Складання судових документів (Позовів, Заяв, Клопотань) у справах, пов'язаних з усіма об'єктами права ІВ, вище зазначеними на цій сторінці;<br>
+• Представництво та захист Ваших прав у суді;<br>
+• Оскарження в суді ухвалених рішень / виданих документів Національним органом інтелектуальної власності;<br>
+• Визнання ТМ добре відомою;<br>
+• Моніторинг поданих заявок щодо порушення прав;<br>
+<br></p>
+
+<p class="onlyred bold">Ми будемо раді працювати для Вас!</p><br>
+<div align="right" class='blog__title'><a href="#top" class="top">На початок ^</a></div>
+						</div>
+						</div>
+                    </section>    
+                    
+                </main>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+					<!-- fotter -->
+					
+			<div class="footer__contacts">
+				<img src="images/phone-tm.ua.webp" alt="телефон для регистрации тм"
+					title="Телефоны и контакты Агентства Украинские торговые марки" width="134" height="87">
+				<div class="footer__phones">
+					<span>Teл.:</span>
+					<a href="tel:+380994330133">099 433-01-33</a>
+					<a href="tel:+380639425533">063 942-55-33</a>
+					<a href="tel:+380987733353">098 773-33-53</a>
+				</div>
+				<div class="footer__social">
+					<a href="tg://resolve?domain=TorgoviMarky">Telegram</a>
+					<a href="viber://chat?number=%2B380987733353">Viber</a>
+					 <a href="whatsapp://send?phone=+380987733353">WhatsApp</a>
+					<a class="" href="mailto:info@tm.ua">info@tm.ua</a>
+				</div>
+			</div>
+			<div class="footer__info">
+				<p class="footer__adress">&nbsp;&nbsp;03117, г. Киев, Берестейский пр-т, 65-А, 3 Секция, оф. 256.
+				</p>
+				<p class="footer__copy">&nbsp;&nbsp; © Агентство УКРАИНСКИЕ ТОРГОВЫЕ МАРКИ, 1998-2025.
+				</p>
+			</div>
+		
+					<!-- /fotter -->
+                </div>
+            </div>
+        </footer>
+		<!-- End footer -->
+    </div>
+    <script src="../js/main.js"></script>
+
+<!--Start of Tawk.to Script-->
+ <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5eb297ee81d25c0e58494913/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

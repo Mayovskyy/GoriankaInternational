@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Про Нас — Горянка Торговий Дім</title>
+    <meta name="description"
+        content="Торговий Дім Горянка — понад 10 років досвіду у дистрибуції якісних харчових продуктів на заході України." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { cream: '#FDFBF7', 'gorianka-red': '#D84315', 'gorianka-green': '#2E5A27', charcoal: '#1A1A1A' },
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] },
+                    borderRadius: { '4xl': '2rem', '5xl': '2.5rem' },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-cream font-sans text-charcoal overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header id="header" class="scrolled fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="images/logo_gorianka.png" alt="Горянка"
+                        class="h-12 w-auto group-hover:scale-105 transition-transform drop-shadow-md" />
+                </a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link" data-i18n="nav.home">Головна</a>
+                    <a href="products.html" class="nav-link" data-i18n="nav.products">Наша Продукція</a>
+                    <a href="brands.html" class="nav-link" data-i18n="nav.brands">Бренди-Партнери</a>
+                    <a href="about.html" class="nav-link active" data-i18n="nav.about">Про Нас</a>
+                    <a href="contacts.html" class="nav-link" data-i18n="nav.contacts">Контакти</a>
+                </nav>
+                <div class="flex items-center gap-3">
+                    <a href="tel:+380677771493" class="hidden sm:flex btn-primary">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <span data-i18n="nav.cta">Зв'язатись</span>
+                    </a>
+                    <button id="langToggleBtn" onclick="toggleLanguage()"
+                        class="hidden sm:flex items-center justify-center w-10 h-10 rounded-xl bg-gorianka-red/10 hover:bg-gorianka-red/20 border border-gorianka-red/30 text-gorianka-red transition-all duration-200"
+                        title="Switch to English">
+                        <span class="text-sm font-semibold tracking-wide">EN</span>
+                    </button>
+                    <button id="menuBtn" class="lg:hidden p-2 rounded-xl bg-white/80 backdrop-blur shadow-sm">
+                        <div class="hamburger-icon"><span></span><span></span><span></span></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu lg:hidden">
+            <div class="px-4 pb-6 pt-2 space-y-1">
+                <a href="index.html" class="mobile-nav-link" data-i18n="nav.home">Головна</a>
+                <a href="products.html" class="mobile-nav-link" data-i18n="nav.products">Наша Продукція</a>
+                <a href="brands.html" class="mobile-nav-link" data-i18n="nav.brands">Бренди-Партнери</a>
+                <a href="about.html" class="mobile-nav-link" data-i18n="nav.about">Про Нас</a>
+                <a href="contacts.html" class="mobile-nav-link" data-i18n="nav.contacts">Контакти</a>
+                <button onclick="toggleLanguage()"
+                    class="w-full text-center mt-2 py-2 rounded-xl bg-gray-100 text-charcoal font-semibold text-sm">EN /
+                    UA</button>
+                <a href="tel:+380677771493" class="btn-primary w-full text-center mt-2">+38 067 777 14 93</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="inline-flex items-center gap-2 bg-white/10 text-white/70 rounded-full px-4 py-2 text-sm mb-5"
+                    data-i18n="about.hero.badge">
+                    Наша Історія</div>
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"><span
+                        data-i18n="about.hero.h1.1">Про</span> <span class="text-gorianka-red"
+                        data-i18n="about.hero.h1.2">Нас</span></h1>
+                <p class="text-white/60 text-lg max-w-2xl mx-auto" data-i18n="about.hero.sub">Ваша довіра — наша якість.
+                    Понад 10 років на ринку
+                    дистрибуції харчових продуктів.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto space-y-8">
+
+            <!-- Story island -->
+            <div class="island bg-white p-10 sm:p-14">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-gorianka-red/10 text-gorianka-red rounded-full px-4 py-2 text-sm font-medium mb-6"
+                            data-i18n="about.story.badge">
+                            📖 Наша Історія</div>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-6 leading-tight"
+                            data-i18n="about.story.h2">Заснована у Серці
+                            Галичини</h2>
+                        <p class="text-gray-600 leading-relaxed mb-5 text-base" data-i18n="about.story.p1">
+                            Торговий Дім «Горянка» — це команда однодумців, яка у 2014 році у мальовничому Львові
+                            заснувала компанію з простою місією: забезпечити жителів заходу України якісними,
+                            натуральними харчовими продуктами від кращих виробників.
+                        </p>
+
+                        <p class="text-gray-600 leading-relaxed text-base" data-i18n="about.story.p2">
+                            Сьогодні Горянка є надійним партнером для тисяч торгових точок Львівської, Тернопільської
+                            та Волинської областей. Ми постійно розширюємо асортимент і географію постачань.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-5">
+                        <div class="bg-gorianka-red rounded-3xl p-7 text-white text-center">
+                            <div class="font-serif text-5xl font-bold mb-2">2014</div>
+                            <div class="text-white/70 text-sm" data-i18n="about.stat.year">Рік заснування</div>
+                        </div>
+                        <div class="bg-charcoal rounded-3xl p-7 text-white text-center mt-6">
+                            <div class="font-serif text-5xl font-bold mb-2">3</div>
+                            <div class="text-white/70 text-sm" data-i18n="about.stat.regions">Області охоплення</div>
+                        </div>
+                        <div class="bg-gorianka-green rounded-3xl p-7 text-white text-center">
+                            <div class="font-serif text-5xl font-bold mb-2">50+</div>
+                            <div class="text-white/70 text-sm" data-i18n="about.stat.brands">Брендів-партнерів</div>
+                        </div>
+                        <div class="bg-amber-500 rounded-3xl p-7 text-white text-center mt-6">
+                            <div class="font-serif text-5xl font-bold mb-2">4</div>
+                            <div class="text-white/70 text-sm" data-i18n="about.stat.offices">Офіси в містах</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values island -->
+            <div class="island bg-gradient-to-br from-charcoal to-zinc-800 p-10 sm:p-14 text-white">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm text-white/70 mb-4"
+                        data-i18n="about.values.badge">
+                        Наші принципи</div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold" data-i18n="about.values.h2">Цінності компанії
+                    </h2>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-colors">
+                        <div class="w-12 h-12 bg-gorianka-red/20 rounded-xl flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-gorianka-red" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold mb-3" data-i18n="about.values.quality.h3">Якість</h3>
+                        <p class="text-white/60 text-sm leading-relaxed" data-i18n="about.values.quality.p">Ми працюємо
+                            лише з перевіреними виробниками,
+                            які гарантують найвищий рівень якості своєї продукції.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-colors">
+                        <div class="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold mb-3" data-i18n="about.values.reliability.h3">Надійність
+                        </h3>
+                        <p class="text-white/60 text-sm leading-relaxed" data-i18n="about.values.reliability.p">
+                            Своєчасне постачання та виконання зобов'язань —;
+                            це основа нашого бізнесу та тривалих партнерських відносин.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-colors">
+                        <div class="w-12 h-12 bg-gorianka-green/30 rounded-xl flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold mb-3" data-i18n="about.values.partnership.h3">
+                            Партнерство</h3>
+                        <p class="text-white/60 text-sm leading-relaxed" data-i18n="about.values.partnership.p">Ми
+                            будуємо довготривалі відносини, засновані на
+                            взаємній повазі та вигоді для всіх сторін.</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-colors">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold mb-3" data-i18n="about.values.growth.h3">Розвиток</h3>
+                        <p class="text-white/60 text-sm leading-relaxed" data-i18n="about.values.growth.p">Ми постійно
+                            зростаємо, розширюємо асортимент і
+                            географію, впроваджуємо нові рішення.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Geography island -->
+            <div class="island bg-white p-10 sm:p-14">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center gap-2 bg-gorianka-green/10 text-gorianka-green rounded-full px-4 py-2 text-sm font-medium mb-4"
+                        data-i18n="about.geo.badge">
+                        📍 Географія</div>
+                    <h2 class="font-serif text-3xl font-bold" data-i18n="about.geo.h2">Де Ми Працюємо</h2>
+                    <p class="text-gray-500 mt-3 max-w-lg mx-auto" data-i18n="about.geo.sub">Наші послуги охоплюють
+                        Львівську, Тернопільську та
+                        Волинську області</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div
+                        class="bg-gorianka-red/5 border border-gorianka-red/20 rounded-2xl p-6 text-center hover:bg-gorianka-red/10 transition-colors">
+                        <div class="w-12 h-12 bg-gorianka-red rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold mb-1" data-i18n="footer.address.lviv">Львів</h3>
+                        <p class="text-gray-500 text-sm" data-i18n="footer.address.lviv.street">вул. Промислова 50/52
+                        </p>
+                        <div class="text-xs text-gorianka-red font-medium mt-2" data-i18n="about.geo.lviv.label">
+                            Головний офіс</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center hover:bg-gray-100 transition-colors">
+                        <div
+                            class="w-12 h-12 bg-gorianka-green rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold mb-1" data-i18n="footer.address.ternopil">Тернопіль</h3>
+                        <p class="text-gray-500 text-sm" data-i18n="footer.address.ternopil.street">вул. Поліська 14</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center hover:bg-gray-100 transition-colors">
+                        <div
+                            class="w-12 h-12 bg-gorianka-green rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold mb-1" data-i18n="footer.address.stryi">Стрий</h3>
+                        <p class="text-gray-500 text-sm" data-i18n="footer.address.stryi.street">вул. Крива 4</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-6 text-center hover:bg-gray-100 transition-colors">
+                        <div
+                            class="w-12 h-12 bg-gorianka-green rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold mb-1" data-i18n="footer.address.lutsk">Луцьк</h3>
+                        <p class="text-gray-500 text-sm" data-i18n="footer.address.lutsk.street">вул. І. Франка 44</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+        <!-- FOOTER -->
+    <footer class="bg-charcoal text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="images/logo_gorianka.png" alt="Горянка" class="h-12 w-auto drop-shadow-md" />
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6" data-i18n="footer.partner">
+                        Надійний партнер, який дбає про якість та задоволення ваших потреб у харчових продуктах.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 bg-white/10 hover:bg-gorianka-red rounded-xl flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" /></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 hover:bg-gorianka-red rounded-xl flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke-width="2" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" stroke-linecap="round" /></svg>
+                        </a>
+                        <a href="https://t.me/goriankalviv" class="w-9 h-9 bg-white/10 hover:bg-gorianka-red rounded-xl flex items-center justify-center transition-colors" aria-label="Telegram">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M21.78 3.28a1.5 1.5 0 00-1.54-.22L2.89 10.56a1.5 1.5 0 00.07 2.79l4.04 1.35 1.53 4.8a.75.75 0 001.3.22l2.47-2.89 4.42 3.26a1.5 1.5 0 002.3-.97l2.25-14.25a1.5 1.5 0 00-.49-1.59z" /></svg>
+                        </a>
+                        <a href="viber://chat?number=+380677771493" class="w-9 h-9 bg-white/10 hover:bg-gorianka-red rounded-xl flex items-center justify-center transition-colors" aria-label="Viber">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.8 3.2C18.5 1 15.4 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12 0-3.4-1-6.5-3.2-8.8zm-8.8 18c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7.9.9-3.6-.2-.4C2.5 15.1 2 13.1 2 12 2 6.5 6.5 2 12 2c2.6 0 5.1 1 7 2.8 1.9 1.8 3 4.3 3 6.9-.1 5.5-4.6 10-10 10.3zm5.8-7.7l-2-1c-.3-.1-.5-.2-.7.2s-.8 1-.9 1.2c-.1.1-.3.2-.5.1-1.5-.7-2.5-1.7-3.2-3.2-.1-.3 0-.4.1-.5l.5-.6c.1-.2.2-.4.3-.6 0-.2 0-.4-.1-.6l-1-2.3c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.8.9-1.1 1.9-.9 3.1.4 1.8 1.5 3.4 3.1 4.7 1.4 1.1 3.2 1.8 5.1 1.8h.4c1.1-.2 2-.8 2.4-1.7.2-.5.1-.9-.5-1.2z" /></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div>
+                    <h4 class="font-semibold text-white mb-5 text-sm tracking-wider uppercase" data-i18n="footer.nav.title">Навігація</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="footer-link" data-i18n="nav.home">Головна</a></li>
+                        <li><a href="products.html" class="footer-link" data-i18n="nav.products">Наша Продукція</a></li>
+                        <li><a href="brands.html" class="footer-link" data-i18n="nav.brands">Бренди-Партнери</a></li>
+                        <li><a href="about.html" class="footer-link" data-i18n="nav.about">Про Нас</a></li>
+                        <li><a href="contacts.html" class="footer-link" data-i18n="nav.contacts">Контакти</a></li>
+                    </ul>
+                </div>
+                <!-- Contacts -->
+                <div>
+                    <h4 class="font-semibold text-white mb-5 text-sm tracking-wider uppercase" data-i18n="footer.contacts.title">Контакти</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-gray-500 text-xs mb-1" data-i18n="footer.phone.label">Телефон</div>
+                            <a href="tel:+380677771493" class="text-white font-semibold text-lg hover:text-gorianka-red transition-colors">+38 067 777 14 93</a>
+                        </div>
+                        <div>
+                            <div class="text-gray-500 text-xs mb-1" data-i18n="footer.email.label">Email</div>
+                            <a href="mailto:td.horyanka@gmail.com" class="text-gray-300 hover:text-white transition-colors text-sm">td.horyanka@gmail.com</a>
+                        </div>
+                        <div>
+                            <div class="text-gray-500 text-xs mb-1" data-i18n="footer.hours.label">Години роботи</div>
+                            <div class="text-gray-300 text-sm" data-i18n="footer.hours.weekdays">Пн–Пт: 08:00 – 18:00</div>
+                            <div class="text-gray-300 text-sm" data-i18n="footer.hours.saturday">Сб: 09:00 – 14:00</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Addresses -->
+                <div>
+                    <h4 class="font-semibold text-white mb-5 text-sm tracking-wider uppercase">Наші Адреси</h4>
+                    <div class="space-y-4">
+                        <div class="flex gap-3">
+                            <div class="w-7 h-7 bg-gorianka-red/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-3.5 h-3.5 text-gorianka-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div><div class="text-white font-medium text-sm">Львів</div><div class="text-gray-400 text-xs">вул. Промислова 50/52</div></div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="w-7 h-7 bg-gorianka-green/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-3.5 h-3.5 text-gorianka-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                            </div>
+                            <div><div class="text-white font-medium text-sm">Тернопіль</div><div class="text-gray-400 text-xs">вул. Поліська 14</div></div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="w-7 h-7 bg-gorianka-green/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-3.5 h-3.5 text-gorianka-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                            </div>
+                            <div><div class="text-white font-medium text-sm">Стрий</div><div class="text-gray-400 text-xs">вул. Крива 4</div></div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="w-7 h-7 bg-gorianka-green/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                                <svg class="w-3.5 h-3.5 text-gorianka-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                            </div>
+                            <div><div class="text-white font-medium text-sm">Луцьк</div><div class="text-gray-400 text-xs">вул. І. Франка 44</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm" data-i18n="footer.copyright">© 2024 Торговий Дім «Горянка». Всі права захищено.</p>
+                <p class="text-gray-600 text-xs" data-i18n="footer.address.bottom">м. Львів, вул. Промислова 50/52</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
